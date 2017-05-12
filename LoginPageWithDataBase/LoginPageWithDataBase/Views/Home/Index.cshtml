@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+
+    //THIS IF BLOCK HERE IS TO MAKE SURE USER DOES NOT SKIP 
+    //THE LOGIN SCREEN BY JUST SIMPLY TYPING ./Login/Home TO URL!
+    //JUST A SIMPLE REDIRECTING
+    if (Session["userID"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>If you see this message it means your login was succesfull!!! </h1>
+    </div>
+</body>
+</html>
